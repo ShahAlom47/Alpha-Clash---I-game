@@ -19,7 +19,7 @@
 
                 <h1 class=" text-white text-6xl uppercase mb-9 font-bold"> ALPHABET CLASH</h1>
                 <p class="text-white text-2xl mb-8">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button onclick="playBtn()" id="playBtn" class="btn font-bold  text-lg mt-3">Play Now</button>
+                <button onclick="play()" id="playBtn" class="btn font-bold  text-lg mt-3">Play Now</button>
 
 
             </div>
@@ -34,7 +34,7 @@
                 <div class="artboard artboard-horizontal phone-6 border-8 rounded-xl border-[#000001bf]  bg-[#ffffff96] flex flex-col">
                     <p class="bg-[#000001bf] text-center pb-2 rounded-b-2xl text-white w-6/12 m-auto "> Don't watch keyboard  while playing...</p>
                    <div class="flex-1  flex items-center justify-center  ">
-                    <p id="alfaDisplay" class="text-black text-2xl text-center font-bold uppercase ">'Press Enter Key For Start Game'</p>
+                    <p id="alfaDisplay" class="text-black text-2xl text-center font-bold uppercase text-7xl ">'Press'</p>
                    </div>
                     
 
@@ -83,7 +83,7 @@
 
                 <button class="btn rounded-full bg-[#a655a6] border-none text-white "> Life:
                     <img src="images/love.svg" alt="">
-                    <span id="lifeDis">0</span>
+                    <span id="lifeDis">5</span>
                      </button>
                 <button class="btn rounded-full bg-[#5c4092] border-none  text-white"> Score:
                     <img src="images/dd.svg" alt="">
@@ -94,11 +94,11 @@
 
 
         <!-- score screen -->
-        <section class="  min-h-screen flex justify-center items-center hidden">
+        <section id="scoreScr"  class="  min-h-screen flex justify-center items-center hidden">
             <div class="  flex gap-4 flex-col justify-center items-center bg-[#ffffff4a] p-6 rounded-xl">
 
-                <h1 class=" text-4xl font-bold text-white ">Score: <span>0</span></h1>
-                <button class=" btn  text-2xs font-bold" >Play Again</button>
+                <h1 class=" text-4xl font-bold text-white ">Score: <span id="finalScore">0</span></h1>
+                <button onclick="play()" id="playAgein" class=" btn  text-2xs font-bold" >Play Again</button>
                 <p class="text-lg font-semibold text-white"> Practice will make you Pro</p>
             </div>
 
@@ -107,7 +107,8 @@
 
 
 
-    <script src="index.js"></script>
+    <script src="script/myJs.js"></script>
+    <!-- <script src="alph.js"></script> -->
   
 </body>
 
