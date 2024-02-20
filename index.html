@@ -12,7 +12,8 @@
 </head>
 
 <body class=" bg-[#5d5d6b81] ">
-    <main class="   m-auto   bg-[url(images/background.png)] bg-no-repeat bg-center  min-h-screen  min-w-96 max-w-6xl   ">
+    <main
+        class="   m-auto   bg-[url(images/background.png)] bg-no-repeat bg-center  min-h-screen  min-w-96 max-w-6xl   ">
         <!-- home pase  -->
         <section id="homeScn" class=" flex justify-center items-center min-h-screen   ">
             <div class="home-container    flex flex-col justify-center items-center">
@@ -27,16 +28,20 @@
 
         </section>
         <!-- game screen  -->
-        <section id="gameScn" class="    w-6/12 m-auto flex gap-8 flex-col items-center justify-center min-h-screen hidden ">
+        <section id="gameScn"
+            class="    w-6/12 m-auto flex gap-8 flex-col items-center justify-center min-h-screen hidden ">
             <!-- display -->
             <div class="display ">
 
-                <div class="artboard artboard-horizontal phone-6 border-8 rounded-xl border-[#000001bf]  bg-[#ffffff96] flex flex-col">
-                    <p class="bg-[#000001bf] text-center pb-2 rounded-b-2xl text-white w-6/12 m-auto "> Don't watch keyboard  while playing...</p>
-                   <div class="flex-1  flex items-center justify-center  ">
-                    <p id="alfaDisplay" class="text-black text-2xl text-center font-bold uppercase text-7xl ">'Press'</p>
-                   </div>
-                    
+                <div id="disColor"
+                    class="artboard artboard-horizontal phone-6 border-8 rounded-xl border-[#000001bf]  bg-[#ffffff96] flex flex-col">
+                    <p class="bg-[#000001bf] text-center pb-2 rounded-b-2xl text-white w-6/12 m-auto "> Don't watch
+                        keyboard while playing...</p>
+                    <div class="flex-1  flex items-center justify-center  ">
+                        <p id="alfaDisplay" class="text-black text-2xl text-center font-bold uppercase text-7xl ">
+                            'Press'</p>
+                    </div>
+
 
                 </div>
             </div>
@@ -78,29 +83,62 @@
                 </div>
             </div>
             <!-- Keyboard end  -->
+
+            <div class=" volume-box w-full flex justify-center items-center">
+
+             
+                  <button id="volume" class=" flex">
+                    <svg id="vOn" class=" hidden swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z"/></svg>
+                    <svg id="vOff" class="  swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/></svg>
+
+                  </button>
+
+                  <input id="vRange"  type="range" min="0" max="1" step="0.2" value="0.5" class="  range-primary" />
+
+
+            </div>
             <!-- button container  -->
             <div class="score-cotainer flex justify-between w-full  ">
 
                 <button class="btn rounded-full bg-[#a655a6] border-none text-white "> Life:
                     <img src="images/love.svg" alt="">
                     <span id="lifeDis">5</span>
-                     </button>
+                </button>
+                <div class="">
+                    <li id="null" class=""></li>
+                    <ul class="steps  steps-horizontal">
+                        
+                        <li id="life1" class="step step-primary"></li>
+                        <li id="life2" class="step step-primary"></li>
+                        <li id="life3" class="step step-primary"></li>
+                        <li id="life4" class="step step-primary"></li>
+                        <li id="life5" class="step step-primary"></li>
+                      </ul>
+                </div>
                 <button class="btn rounded-full bg-[#5c4092] border-none  text-white"> Score:
                     <img src="images/dd.svg" alt="">
-                <span id="scoreDis">0</span> </button>
+                    <span id="scoreDis">0</span> </button>
             </div>
 
         </section>
 
 
         <!-- score screen -->
-        <section id="scoreScr"  class="  min-h-screen flex justify-center items-center hidden">
+        <section id="scoreScr" class="  min-h-screen flex justify-center items-center hidden">
             <div class="  flex gap-4 flex-col justify-center items-center bg-[#ffffff4a] p-6 rounded-xl">
 
                 <h1 class=" text-4xl font-bold text-white ">Score: <span id="finalScore">0</span></h1>
-                <button onclick="play()" id="playAgein" class=" btn  text-2xs font-bold" >Play Again</button>
+                <button onclick="play()" id="playAgein" class=" btn  text-2xs font-bold">Play Again</button>
                 <p class="text-lg font-semibold text-white"> Practice will make you Pro</p>
+
             </div>
+
+        </section>
+
+        <section id="audio">
+
+            <audio id="rightS" src="Audio/mixkit-game-click-1114.wav"></audio>
+            <audio id="wrongS" src="Audio/buzzer-or-wrong-answer-20582 (1).mp3"></audio>
 
         </section>
     </main>
@@ -109,7 +147,7 @@
 
     <script src="script/myJs.js"></script>
     <!-- <script src="alph.js"></script> -->
-  
+
 </body>
 
 </html>
